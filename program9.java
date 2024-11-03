@@ -2,8 +2,8 @@ class P9
 {
     public static void main(String args[])
     {
-        Thread thread1 = new Thread();
-        Thread thread2 = new Thread();
+        Thread thread1 = new Thread(()->printNumber(1,10));
+        Thread thread2 = new Thread(()->printNumber(90,100));
         thread1.start();
         thread2.start();
         try
